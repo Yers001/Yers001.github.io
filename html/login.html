@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <title>Registration</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- Fix font-awesome link -->
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="https://i.pinimg.com/originals/93/b0/83/93b0832b183c8fd013c8606878426966.png"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="logo">Chess<span>.</span></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="character.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="location.html">Location</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="icons">
+    <a href="basket.html" class="fas fa-shopping-cart"></a>
+    <a href="login.html" class="fas fa-user"></a>
+  </div>
+</header>
+
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<section>
+  <div class="form-box">
+    <div class="form-value">
+      <form action="">
+        <h2></h2>
+        <p id="result"></p>
+        <div class="inputbox">
+          <ion-icon name="person-outline"></ion-icon>
+          <input
+            id="logUsername"
+            type="text"
+            placeholder="username"
+            required
+            minlength="4"
+            maxlength="16"
+          />
+          <label id="logUsername" for="logUsername"></label>
+        </div>
+        <div class="inputbox">
+          <ion-icon id="eyeicon" name="eye-off-outline"></ion-icon>
+          <input
+            id="logPassword"
+            type="password"
+            placeholder="password"
+            required
+            minlength="4"
+            maxlength="16"
+          />
+          <label id="logPassword" for="logPassword"></label>
+        </div>
+        <div class="forget">
+          <label for=""><input type="checkbox" />Remember me</label>
+        </div>
+        <button type="submit" id="loginBtn">Log in</button>
+        <div class="register">
+          <p>
+            Don't have an account? <a href="registration.html">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<script src="../js/login.js"></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+</body>
+</html>

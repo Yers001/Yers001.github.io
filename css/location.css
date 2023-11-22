@@ -1,0 +1,43 @@
+.btn {
+    background-color: #76321b;
+    margin: 20px;
+    padding: 10px 30px;
+}
+
+.nadpis {
+    font-size: 30px;
+    text-align: center; /* Выравниваем текст по центру */
+    max-width: 600px; /* Опционально: ограничиваем максимальную ширину блока */
+    margin: 0 auto; /* Центрируем блок по горизонтали */
+    padding: 20px; /* Добавляем отступ внутри блока */
+    border: 2px solid #76321b; /* Добавляем рамку толщиной 2px и цвета черного */
+}
+
+#tabButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #76321b;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+.flower {
+    display: block;
+    margin: auto;
+    position: absolute;
+
+}
+
+
+

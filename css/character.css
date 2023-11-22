@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff;
+}
+
+.card img {
+    width: 100%; /* Make the images fill the container width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.card-body {
+    height: 150px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.character-image {
+    width: 250px; /* Set a fixed width for the images */
+    height: 250px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+    border-radius: 0%; /* Make the images circular */
+}
+
+.character-image:hover {
+    transform: scale(1.1); /* Add a zoom effect on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+.character-description {
+    font-family: "Arial", sans-serif; /* Change to your desired font */
+    font-size: 18px; /* Increase the font size */
+}
+
+.card {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn {
+    margin-top: -70px;
+}
+

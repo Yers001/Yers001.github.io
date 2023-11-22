@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Fix font-awesome link -->
+  <link rel="icon" type="image/x-icon"
+        href="https://i.pinimg.com/originals/93/b0/83/93b0832b183c8fd013c8606878426966.png">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+      /* Styles for the modal box and overlay */
+      #modal {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 10px;
+          padding: 60px;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          z-index: 1000;
+      }
+
+      #overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 900;
+          border-radius: 10px;
+
+      }
+  </style>
+
+
+</head>
+<body>
+
+
+<header>
+
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="logo">Chess<span>.</span></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href='index.html'>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='character.html'>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='review.html'>Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='contact.html'>Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='location.html'>Location</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="icons">
+
+    <a href='basket.html' class="fas fa-shopping-cart"></a>
+    <a href='login.html' class="fas fa-user"></a>
+  </div>
+
+</header>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+
+
+<!--SECTION PRODUCTS-->
+<section class="products" id="products">
+  <h1 class="heading"><span> Latest </span> products </h1>
+  <div class="filter">
+    <div class="dropdown">
+      <button class="filter-btn dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Filter
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+        <li><a class="dropdown-item" href="#" onclick="filterTraining()">Training</a></li>
+        <li><a class="dropdown-item" href="#" onclick="filterOlympiad()">Olympiad</a></li>
+        <li><a class="dropdown-item" href="#" onclick="filterVIP()">Desk</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="box-container">
+
+
+    <!-- Button to trigger the modal -->
+    <a class="share-btn fas fa-share" onclick="openModal()"> </a>
+
+    <!-- The Modal -->
+    <div id="overlay" onclick="closeModal()"></div>
+    <div id="modal">
+      <p>This is a modal box!</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script>
+      function addToBasket(planName, price) {
+        const item = `${planName}-${price}`;
+        const currentBasket = localStorage.getItem('basket') || '';
+        localStorage.setItem(
+    'basket',
+    currentBasket ? `${currentBasket},${item}` : item,
+  );
+        alert(`${planName} added to basket`);
+      }
+
+      function openModal() {
+        document.getElementById('modal').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+      }
+
+      function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+      }
+    </script>
+
+    <hr>
+
+    <br>
+
+  </div>
+  </div>
+</section>
+
+<div class="container-fluid">
+  <button id="bonusBtn" class="btn" style="background-color: #333; align-items: center; left: 37%;position: relative;"
+          data-bs-toggle="tooltip" data-bs-placement="top" title="If you want get discount play our game"
+          onclick="window.location.href='discount.html'">Play and Get 10% discount</button>
+</div>
+
+<br>
+<br>
+<br>
+
+<!--SECTION FOOTER-->
+<section class="footer">
+
+  <div class="box-container">
+
+    <div class="box">
+
+      <h3>quick lins</h3>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#review">Review</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
+    <div class="box">
+
+      <h3>extra lins</h3>
+      <a href="#">my account</a>
+      <a href="#">my order</a>
+      <a href="#">my favorite</a>
+
+    </div>
+
+    <div class="box">
+
+      <h3>locations</h3>
+      <a href="#">Kazakhstan</a>
+      <a href="#">USA</a>
+      <a href="#">Japan</a>
+      <a href="#">France</a>
+      <a href="#">Turkey</a>
+
+    </div>
+
+    <div class="box">
+
+      <h3>contact info</h3>
+      <a href="#">+7 705 398 12 51 </a>
+      <a href="#">221222@astanait.edu.kz</a>
+      <a href="#">Astana, Kazakhstan</a>
+      <img src="https://i.pinimg.com/originals/c2/6a/71/c26a71a5f607ba25f711891dce4b1204.jpg" alt="">
+
+    </div>
+
+  </div>
+  <div class="created"> created by <span>Queens's Gambit</span></div>
+</section>
+
+
+
+<script>
+  const products = [
+  {
+    name: 'Online Course',
+      price: 9.99,
+    type: 'training',
+      img: 'https://www.chess.com/bundles/web/images/apps/header-phone.0dff478b.png',
+  },
+  {
+      name: 'Individual Course',
+      price: 19.99,
+      type: 'training',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Career_Change_Chess_Cartoon.svg/1333px-Career_Change_Chess_Cartoon.svg.png',
+  },
+  {
+      name: 'Group Lessons',
+      price: 14.99,
+      type: 'training',
+      img: 'https://img.freepik.com/premium-vector/cartoon-character-playing-chess-game_29937-4053.jpg',
+  },
+  {
+      name: 'Olympiad Training',
+    price: 29.99,
+      type: 'olympiad',
+      img: 'https://static.vecteezy.com/system/resources/previews/024/483/829/non_2x/schoolgirl-with-books-and-cup-for-winning-olympiad-rejoices-at-good-marks-for-test-png.png',
+  },
+  {
+      name: 'Chess Desk',
+      price: 5.99,
+      type: 'vip',
+      img: 'https://cartoonmovement.typepad.com/.a/6a014e5f5d3c7c970c0263e99cbba6200b-pi',
+  },
+  {
+      name: 'VIP',
+      price: 49.99,
+      type: 'vip',
+      img: 'https://ae01.alicdn.com/kf/S2cd6c9e1d413498e80a719e1b7bb4512n/Creative-chess-resin-decoration-simulation-chess-pieces-home-window-wine-cabinet-desktop-creative-decoration.jpg',
+  },
+];
+
+  let activeFilter = 'all';
+
+  function filterTraining() {
+    activeFilter = 'training';
+    filterProducts();
+  }
+
+  function filterOlympiad() {
+    activeFilter = 'olympiad';
+    filterProducts();
+  }
+
+  function filterVIP() {
+    activeFilter = 'vip';
+    filterProducts();
+  }
+
+  function filterProducts() {
+    const filtered = products.filter((p) => {
+      if (activeFilter === 'all') {
+      return true;
+      }
+      return p.type === activeFilter;
+    });
+    displayProducts(filtered);
+  }
+
+  function displayProducts(prods) {
+    const container = document.querySelector('.box-container');
+    container.innerHTML = '';
+    prods.forEach((product) => {
+      const box = document.createElement('div');
+      box.classList.add('box');
+      box.innerHTML = `
+                    <span class="discount"></span>
+                    <div class="image">
+                        <img src="${product.img}" alt="${product.name}">
+                        <div class="icons">
+                            <a onclick="addToBasket('${product.name}', ${product.price})" src="${product.name}" alt="${product.price} class="my-3"' class="fas fa-shopping-cart"></a>
+                           <a class="share-btn fas fa-share" onclick="openModal()"> </a>
+                           </div>
+
+                        <div id="overlay" onclick="closeModal()"></div>
+
+                        <div id="modal">
+
+
+  <!-- Existing HTML structure -->
+
+<p style="font-size: 30px; color:black; ">Share this on social media:</p>
+
+<div>
+<a href="#" onclick="shareFacebook()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" style="width: 60px; height: 60px; margin-right: 5px; filter: grayscale(70%);">
+</a>
+
+<a href="#" onclick="shareTikTok()">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/450/small/tiktok-icon-free-png.png" class="share-icon" style="width: 60px; height: 60px; margin-right: 5px; filter: grayscale(70%);">
+</a>
+
+<a href="#" onclick="shareLinkedIn()">
+  <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png" class="share-icon" style="width: 60px; height: 60px; margin-right: 5px; filter: grayscale(70%);">
+</a>
+
+<a href="#" onclick="shareTelegram()">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" class="share-icon" style="width: 60px; height: 60px; margin-right: 5px; filter: grayscale(70%);">
+</a>
+
+<a href="#" onclick="shareInstagram()">
+  <img src="https://companyleader.themilitaryleader.com/wp-content/uploads/2021/07/instagram-circle-icon-png-4.png" class="share-icon" style="width: 60px; height: 60px; margin-right: 5px; filter: grayscale(70%);">
+</a>
+</div>
+
+<div >
+<button onclick="closeModal()"
+        style="
+          width: 60px;
+          height: 40px;
+          font-size: 20px;
+          position: fixed;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: navajowhite;
+          border-radius: 15px;
+          text-align: center;
+          line-height: 40px;">
+    Close
+</button>
+</div>
+
+</div>
+</div>
+<style>
+  .share-icon { q q q
+    width: 48px;
+    border-radius: 50%;
+  }
+</style>
+
+                    <div class="content">
+                        <h3>${product.name}</h3>
+                        <div class="price">${product.price}$<span></span></div>
+                    </div>`;
+
+      container.appendChild(box);
+    });
+  }
+
+  // Initial display of products
+  filterProducts();
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/share.js"></script>
+
+
+</body>
+</html>

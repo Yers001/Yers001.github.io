@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <title>Queens Gambit</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="https://i.pinimg.com/originals/93/b0/83/93b0832b183c8fd013c8606878426966.png"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/css/contact.css" />
+</head>
+<body>
+<header>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="logo">Chess<span>.</span></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="character.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="location.html">Location</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="icons">
+    <a href="basket.html" class="fas fa-shopping-cart"></a>
+    <a href="login.html" class="fas fa-user"></a>
+  </div>
+</header>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+<!-- SECTION CONTACT -->
+<section class="contact" id="contact">
+  <h1 class="heading"><span> contact </span> us</h1>
+
+  <div class="row">
+    <form id="contactForm">
+      <input type="text" placeholder="name" class="box" />
+      <input type="email" placeholder="email" class="box" />
+      <input type="number" placeholder="number" class="box" />
+      <textarea
+        name=""
+        placeholder="message"
+        class="box"
+        id=""
+        cols="30"
+        rows="30"
+      ></textarea>
+      <input
+        type="submit"
+        value="send message"
+        class="btn"
+        style="background-color: #76321b"
+        data-toggle="popover"
+        data-placement="top"
+        data-content="Submit it?"
+      />
+      <div
+        class="spinner-border spinner-border-sm"
+        role="status"
+        style="display: none"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div
+        class="spinner-grow spinner-grow-sm"
+        role="status"
+        style="display: none"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </form>
+
+    <div class="image">
+      <img src="../images/qq.jpeg" alt="" />
+    </div>
+  </div>
+</section>
+
+<!-- SECTION FOOTER -->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>quick lins</h3>
+      <a href="index.html">Home</a>
+      <a href="character.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="review.html">Review</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="box">
+      <h3>extra lins</h3>
+      <a href="../html/login.html">my account</a>
+      <a href="../html/basket.html">my order</a>
+      <a href="../html/quiz.html">Test</a>
+    </div>
+
+    <div class="box">
+      <h3>locations</h3>
+      <a href="#">Kazakhstan</a>
+      <a href="#">USA</a>
+      <a href="#">Japan</a>
+      <a href="#">France</a>
+      <a href="#">Turkey</a>
+    </div>
+
+    <div class="box">
+      <h3>contact info</h3>
+      <a href="#">+7 705 398 1251</a>
+      <a href="#">221222@astanait.edu.kz</a>
+      <a href="#">Astana, Kazakhstan</a>
+      <img
+        src="https://i.pinimg.com/originals/c2/6a/71/c26a71a5f607ba25f711891dce4b1204.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="created">created by <span>Queen's Gambit</span></div>
+</section>
+
+<script>
+  const btn = document.querySelector('#triggerEnter');
+  const result = document.querySelector('#result');
+
+  document.body.addEventListener('keydown', (e) => {
+    if (e.key == 'Enter') {
+      result.innerText = 'Enter Key Pressed';
+    }
+
+    if (e.key == 'Enter' && e.shiftKey) {
+      result.innerText = 'Enter + Shift Key Pressed';
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    // Trigger Enter key Press
+    const keyEvent = new KeyboardEvent('keydown', { key: 'Enter' });
+
+    // Trigger Enter + Shift key Press
+    // const keyEvent = new KeyboardEvent("keydown", { key: "Enter", shiftKey: true });
+
+    document.body.dispatchEvent(keyEvent);
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Disable the submit button
+    document.querySelector('input[type="submit"]').disabled = true;
+
+    // Show the spinners
+    document.querySelector('.spinner-border').style.display = 'inline-block';
+    document.querySelector('.spinner-grow').style.display = 'inline-block';
+
+    // Simulate a delay to show loading state (remove this in a real scenario)
+    setTimeout(() => {
+      // Hide the spinners after the simulated delay
+      document.querySelector('.spinner-border').style.display = 'none';
+      document.querySelector('.spinner-grow').style.display = 'none';
+
+      // Enable the submit button
+      document.querySelector('input[type="submit"]').disabled = false;
+
+      alert('Form submitted successfully!');
+    }, 2000); // Simulated delay of 2 seconds
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize the Popover for the "send message" button
+    const sendMessageButton = document.querySelector('input[type="submit"]');
+    new bootstrap.Popover(sendMessageButton, {
+      trigger: 'focus', // Display the popover on focus
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <title>Queens Gambit</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="https://i.pinimg.com/originals/93/b0/83/93b0832b183c8fd013c8606878426966.png"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+      body {
+          background-color: white;
+      }
+
+      .achievements-column h3 {
+          font-size: 20px; /* Adjust the size as needed */
+      }
+
+      .achievement-item {
+          font-size: 15px; /* Adjust the size as needed */
+      }
+
+      .tab-content {
+          display: none;
+      }
+
+      .active-tab {
+          display: block;
+      }
+
+      button {
+          cursor: pointer;
+          width: 10px;
+          height: 10px;
+      }
+
+
+      .achievements-column {
+          padding: 15px;
+          background-color: #f9f9f9;
+          border-radius: 15px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          margin-left: 300px;
+          margin-top: -600px;
+      }
+
+      .text-success {
+          color: saddlebrown; /* Green color for success text */
+      }
+
+      .fw-bold {
+          font-weight: bold;
+      }
+
+      .mb-4 {
+          margin-bottom: 1.5rem;
+      }
+
+      .list-unstyled {
+          padding-left: 0;
+      }
+
+      .achievement-item {
+          border-left: 3px solid saddlebrown; /* Green border for achievement items */
+          padding-left: 10px;
+          margin-bottom: 10px;
+          text-align: center;
+      }
+
+      .achievement-item:last-child {
+          margin-bottom: 0;
+      }
+
+      .rounded-cube {
+          border-radius: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      }
+
+      .rounded-cube img {
+          border-radius: 15px;
+      }
+
+      .comment-box {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+          border-radius: 10px;
+          background-color: #f9f9f9;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          margin-top: 50px;
+      }
+
+      .comment-box textarea {
+          width: 100%;
+          min-height: 100px;
+          resize: vertical;
+          margin-bottom: 15px;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+      }
+
+      .comment-box button {
+          padding: 25px 80px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+
+      }
+
+      .btn.btn-primary.btn-block {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .comment-box button:hover {
+          background-color: #0056b3;
+      }
+  </style>
+</head>
+<body>
+<header>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="logo">Chess<span>.</span></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="character.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="location.html">Location</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="icons">
+
+    <a href="basket.html" class="fas fa-shopping-cart"></a>
+    <a href="login.html" class="fas fa-user"></a>
+  </div>
+</header>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<!--SECTION REVIEW-->
+<section class="review" id="review">
+  <h1 class="heading"><span>comments</span></h1>
+  <div class="box-container">
+    <!-- Reviews will be dynamically added here using JavaScript -->
+  </div>
+</section>
+<div class="container">
+  <div class="comment-box">
+    <h2 class="text-center">Leave a Comment</h2>
+    <form id="guestCommentForm">
+      <input type="text" id="guestName" class="form-control" placeholder="Your Name" required />
+      <div class="rating">
+        <span class="star" data-value="1"></span>
+        <span class="star" data-value="2"></span>
+        <span class="star" data-value="3"></span>
+        <span class="star" data-value="4"></span>
+        <span class="star" data-value="5"></span>
+        <input type="hidden" id="guestRating" name="guestRating" value="0" />
+      </div>
+      <textarea id="guestComment" class="form-control" placeholder="Your comment..." required></textarea>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!--SECTION FOUNDER-->
+<section class="founder">
+  <!-- This section will be populated using JavaScript -->
+</section>
+
+<!--SECTION FOOTER-->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>quick lins</h3>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#review">Review</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="box">
+      <h3>extra lins</h3>
+      <a href="#">my account</a>
+      <a href="#">my order</a>
+      <a href="#">my favorite</a>
+    </div>
+
+    <div class="box">
+      <h3>locations</h3>
+      <a href="#">Kazakhstan</a>
+      <a href="#">USA</a>
+      <a href="#">Japan</a>
+      <a href="#">France</a>
+      <a href="#">Turkey</a>
+    </div>
+
+    <div class="box">
+      <h3>contact info</h3>
+      <a href="#">+7 705 398 12 51</a>
+      <a href="#">221222@astanait.edu.kz</a>
+      <a href="#">Astana, Kazakhstan</a>
+      <img
+        src="https://i.pinimg.com/originals/c2/6a/71/c26a71a5f607ba25f711891dce4b1204.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="created">created by <span>Qween's Gambit</span></div>
+</section>
+
+<script src="../js/review.js"></script>
+</body>
+</html>

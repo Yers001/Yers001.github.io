@@ -1,0 +1,18 @@
+body {
+  background-color: #ffffff;
+}
+form {
+  background-color: #1a1d29;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.spinner-border {
+  width: 4rem; /* Adjust the size as needed */
+  height: 4rem; /* Adjust the size as needed */
+}
+
+.spinner-grow {
+  width: 4rem; /* Adjust the size as needed */
+  height: 4rem; /* Adjust the size as needed */
+}
